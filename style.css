@@ -21,7 +21,7 @@ justify-content:space-between;
 align-items:center;
 padding:18px 50px;
 background:rgba(0,0,0,0.4);
-backdrop-filter:blur(12px);
+backdrop-filter:blur(15px);
 z-index:999;
 }
 
@@ -41,18 +41,27 @@ color:#d4af37;
 font-weight:900;
 }
 
-/* HERO */
+/* HERO ULTRA */
 .hero{
 height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:radial-gradient(#1a1a1a,#000);
+
+background:linear-gradient(-45deg,#000,#1a1a1a,#000,#111);
+background-size:400% 400%;
+animation:move 8s ease infinite;
+}
+
+@keyframes move{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
 
 .hero h1{
-font-size:52px;
+font-size:55px;
 color:#d4af37;
 }
 
@@ -61,6 +70,7 @@ color:#ccc;
 margin-top:10px;
 }
 
+/* BUTTONS */
 .btn{
 display:inline-block;
 margin-top:20px;
@@ -71,7 +81,6 @@ border-radius:30px;
 text-decoration:none;
 }
 
-/* JOIN BUTTON */
 .join-btn{
 display:inline-block;
 margin-top:15px;
@@ -82,12 +91,10 @@ border-radius:30px;
 text-decoration:none;
 font-weight:bold;
 transition:0.3s;
-box-shadow:0 0 15px rgba(34,158,217,0.4);
 }
 
 .join-btn:hover{
 transform:scale(1.05);
-box-shadow:0 0 25px rgba(34,158,217,0.7);
 }
 
 /* SECTIONS */
@@ -113,7 +120,7 @@ margin-bottom:15px;
 .stats{
 display:flex;
 justify-content:center;
-gap:60px;
+gap:70px;
 padding:70px;
 background:#0f0f0f;
 text-align:center;
