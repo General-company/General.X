@@ -1,4 +1,4 @@
-// NAV SCROLL EFFECT
+// NAV BACKGROUND
 window.addEventListener("scroll",()=>{
 const nav=document.getElementById("nav");
 nav.style.background = window.scrollY>50 ? "#000" : "rgba(0,0,0,0.4)";
@@ -20,17 +20,17 @@ sections.forEach(s=>observer.observe(s));
 // COUNTERS
 const counters=document.querySelectorAll(".count");
 
-counters.forEach(c=>{
+counters.forEach(counter=>{
 const update=()=>{
-let target=+c.dataset.target;
-let value=+c.innerText;
-let step=target/100;
+let target=+counter.dataset.target;
+let value=+counter.innerText;
+let step=target/90;
 
 if(value<target){
-c.innerText=Math.ceil(value+step);
+counter.innerText=Math.ceil(value+step);
 setTimeout(update,20);
 }else{
-c.innerText=target;
+counter.innerText=target;
 }
 };
 update();
